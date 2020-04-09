@@ -1,0 +1,8 @@
+{
+    "name": "conference-ui",
+    "version": "1.0.0",
+    "devDependencies": {
+        "babel-core": "^6.25.0",
+        "webpack": "^3.1.0"
+    }
+}
