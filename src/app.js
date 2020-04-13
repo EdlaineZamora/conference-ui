@@ -1,31 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ConferencesTable from './components/ConferencesTable/ConferencesTable';
 
-function App() {
-    return (
-        <div >
-            <form class="form">
-                <div class="form-group">
-                    <label for="conference-name">Name</label>
-                    <input type="text" id="conference-name" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label for="data">Data</label>
-                    <input type="date" id="data" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label for="conference-place">Place</label>
-                    <input type="text" id="conference-place" class="form-control" />
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            <div class="panel panel-primary">
-                <div class="panel-heading">Conferences</div>
-                <div class="panel-body">
-                    Content
-        </div>
+class App extends Component {
+    state = {
+        conferences: [
+            {
+                "id": 1,
+                "name": "OReilly",
+                "place": "London"
+            },
+            {
+                "id": 2,
+                "name": "TDC",
+                "place": "São Paulo"
+            },
+            {
+                "id": 3,
+                "name": "MTC",
+                "place": "Belo Horizonte"
+            },
+            {
+                "id": 4,
+                "name": "Agile Brazil",
+                "place": "Rio de Janeiro"
+            }
+        ]
+    }
+
+    removeConference = index => {
+        const { conferences } = this.state;
+
+        this.setState(
+            {
+                conferences: conferences
+                    .filter((conferenceIndex, actualPosition) => {
+                        return index !== actualPosition;
+                    }),
+            }
+        )
+    }
+
+    render() {
+        return (
+            <div >
+                <ConferencesTable conferences={this.state.conferences} removeConference={this.removeConference} />
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default App;
