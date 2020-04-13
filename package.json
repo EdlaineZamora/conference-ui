@@ -1,17 +1,26 @@
 {
-    "name": "conference-ui",
-    "version": "1.0.0",
-    "dependencies": {
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "react-scripts": "^3.4.1"
-    },
-    "devDependencies": {
-        "babel-core": "^6.25.0",
-        "babel-loader": "^7.1.0",
-        "webpack": "^3.1.0"
-    },
-    "scripts": {
-        "build-dev": "webpack --config webpack.config.js"
-    }
+  "name": "conference-ui",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
