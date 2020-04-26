@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const PageNotFound = () => {
+const NotFound = () => {
     return (
         <Fragment>
             <h1>Page not Found</h1>
@@ -8,4 +8,4 @@ const PageNotFound = () => {
     );
 }
 
-export default PageNotFound;
+export default NotFound;

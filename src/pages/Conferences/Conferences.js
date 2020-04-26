@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ConferencesTable from './components/ConferencesTable/ConferencesTable';
+import ConferencesTable from '../../components/ConferencesTable/ConferencesTable';
 
-class App extends Component {
+class Conferences extends Component {
     state = {
         conferences: [
             {
@@ -49,4 +49,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Conferences;
