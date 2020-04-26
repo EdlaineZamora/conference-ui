@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ConferencesTable from '../../components/ConferencesTable/ConferencesTable';
+import DataTable from '../../components/DataTable/DataTable';
 
 class Conferences extends Component {
     state = {
@@ -43,7 +43,7 @@ class Conferences extends Component {
     render() {
         return (
             <div >
-                <ConferencesTable conferences={this.state.conferences} removeConference={this.removeConference} />
+                <DataTable items={this.state.conferences} removeItem={this.removeConference} />
             </div>
         );
     }

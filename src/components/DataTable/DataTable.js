@@ -12,12 +12,12 @@ const TableHead = () => {
 }
 
 const TableBody = props => {
-    const lines = props.conferences.map((conference, index) => {
+    const lines = props.items.map((item, index) => {
         return (
             <tr key={index}>
-                <td>{conference.name}</td>
-                <td>{conference.place}</td>
-                <td><button onClick={() => {props.removeConference(index)}}>Remover</button></td>
+                <td>{item.name}</td>
+                <td>{item.place}</td>
+                <td><button onClick={() => {props.removeItem(index)}}>Remover</button></td>
             </tr>
         );
     })
@@ -29,17 +29,17 @@ const TableBody = props => {
     );
 }
 
-class ConferencesTable extends Component {
+class DataTable extends Component {
     render() {
-        const conferences = this.props.conferences;
+        const items = this.props.items;
 
         return (
             <table>
                 <TableHead />
-                <TableBody conferences={conferences} removeConference={this.props.removeConference} />
+                <TableBody items={items} removeItem={this.props.removeItem} />
             </table>
         );
     }
 }
 
-export default ConferencesTable;
+export default DataTable;
