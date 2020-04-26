@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import './DataTable.scss';
 
 const TableHead = () => {
     return (
-        <thead>
+        <thead className="table-header">
             <tr>
                 <th>Name</th>
                 <th>Place</th>
+                <th>Action</th>
             </tr>
         </thead>
     );
@@ -14,7 +16,7 @@ const TableHead = () => {
 const TableBody = props => {
     const lines = props.items.map((item, index) => {
         return (
-            <tr key={index}>
+            <tr className="table-row" key={index}>
                 <td>{item.name}</td>
                 <td>{item.place}</td>
                 <td><button onClick={() => {props.removeItem(index)}}>Remover</button></td>
@@ -34,7 +36,7 @@ class DataTable extends Component {
         const items = this.props.items;
 
         return (
-            <table>
+             <table className="responsive-table">
                 <TableHead />
                 <TableBody items={items} removeItem={this.props.removeItem} />
             </table>
